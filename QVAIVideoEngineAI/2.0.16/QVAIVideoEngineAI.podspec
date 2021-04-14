@@ -26,11 +26,11 @@ end
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'git@gitlab.quvideo.com:iOSBusinessSDKGroup/QVAIVideoEngineAI'
+  s.homepage         = 'git@github.com:QuVideoDeveloper/QVAIVideoEngineAI'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Sunshine' => 'cheng.xia@quvideo.com' }
-  s.source           = { :git => 'git@gitlab.quvideo.com:iOSBusinessSDKGroup/QVAIVideoEngineAI.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@github.com:QuVideoDeveloper/QVAIVideoEngineAI.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'

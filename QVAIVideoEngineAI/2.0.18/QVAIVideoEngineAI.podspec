@@ -65,7 +65,7 @@ end
       'Crop' => ['QVAIVideoEngineAI/Libs/Crop/Fdmodels/**/*.*']
     }
   end
-#分割代码 core
+#人体分割
   s.subspec 'SegmentAI' do |sgtAI|
       sgtAI.dependency 'QVAIVideoEngineAI/Core'
       sgtAI.dependency 'QVAIVideoEngineAI/CommonLibs'
@@ -74,21 +74,9 @@ end
       sgtAI.private_header_files = 'QVAIVideoEngineAI/Classes/SegmentAI/Private/Include/*.h'
     
       sgtAI.vendored_libraries = 'QVAIVideoEngineAI/Libs/SegmentAI/*.a'
-  end
-
-#人体分割
-  s.subspec 'PortraitSeg' do |portrait|
-    portrait.dependency 'QVAIVideoEngineAI/SegmentAI'
-    portrait.resource_bundles = {
-       'PortraitSeg' => ['QVAIVideoEngineAI/Libs/SegmentAI/PortraitSeg/**/*.*']
-     }
-  end
-
-#衣服分割
-  s.subspec 'ClothSeg' do |cloth|
-    cloth.dependency 'QVAIVideoEngineAI/SegmentAI'
-    cloth.resource_bundles = {
-       'ClothSeg' => ['QVAIVideoEngineAI/Libs/SegmentAI/ClothSegM/**/*.*']
+   
+   sgtAI.resource_bundles = {
+       'SegmentAI' => ['QVAIVideoEngineAI/Libs/SegmentAI/Fdmodels/**/*.*']
      }
   end
 
@@ -139,73 +127,14 @@ end
       }
 end
 
-#人头分割
-  s.subspec 'HeadSeg' do |head|
-    head.dependency 'QVAIVideoEngineAI/Core'
-    head.dependency 'QVAIVideoEngineAI/CommonLibs'
-    head.dependency 'QVAIVideoEngineAI/SegmentAI'
-    head.dependency 'QVAIVideoEngineAI/FaceLandmark'
-    head.source_files = 'QVAIVideoEngineAI/Libs/HeadSeg/Classs/**/*'
-    head.public_header_files = 'QVAIVideoEngineAI/Libs/HeadSeg/Classs/public/*.h'
-    head.private_header_files = 'QVAIVideoEngineAI/Libs/HeadSeg/Classs/Include/*.h'
-    head.vendored_libraries = 'QVAIVideoEngineAI/Libs/HeadSeg/Libs/*.a'
-  
-  head.resource_bundles = {
-        'HeadSeg' => ['QVAIVideoEngineAI/Libs/HeadSeg/Models/**/*.*']
-      }
-end
 
-
-#人体骨骼
-  s.subspec 'HumanPose' do |humanP|
-      humanP.dependency 'QVAIVideoEngineAI/Core'
-      humanP.dependency 'QVAIVideoEngineAI/CommonLibs'
-      humanP.source_files = 'QVAIVideoEngineAI/Libs/HumanPose/Classs/**/*'
-      humanP.public_header_files = 'QVAIVideoEngineAI/Libs/HumanPose/Classs/public/*.h'
-      humanP.private_header_files = 'QVAIVideoEngineAI/Libs/HumanPose/Classs/Include/*.h'
-      humanP.vendored_libraries = 'QVAIVideoEngineAI/Libs/HumanPose/Libs/*.a'
-  
-  humanP.resource_bundles = {
-        'HumanPose' => ['QVAIVideoEngineAI/Libs/HumanPose/Models/**/*.*']
-      }
-end
-
-#人脸渐变
-  s.subspec 'Facemorphing' do |faceM|
-    faceM.dependency 'QVAIVideoEngineAI/Core'
-    faceM.dependency 'QVAIVideoEngineAI/CommonLibs'
-    faceM.source_files = 'QVAIVideoEngineAI/Libs/Facemorphing/Classs/**/*'
-    faceM.public_header_files = 'QVAIVideoEngineAI/Libs/Facemorphing/Classs/public/*.h'
-    faceM.private_header_files = 'QVAIVideoEngineAI/Libs/Facemorphing/Classs/Include/*.h'
-    faceM.vendored_libraries = 'QVAIVideoEngineAI/Libs/Facemorphing/Libs/*.a'
-  
-    faceM.resource_bundles = {
-        'HumanPose' => ['QVAIVideoEngineAI/Libs/Facemorphing/Models/**/*.*']
-      }
-end
-
-#图片分类
-  s.subspec 'ImageCls' do |imageC|
-    imageC.dependency 'QVAIVideoEngineAI/Core'
-    imageC.dependency 'QVAIVideoEngineAI/CommonLibs'
-    imageC.source_files = 'QVAIVideoEngineAI/Libs/ImageCls/Classs/**/*'
-    imageC.public_header_files = 'QVAIVideoEngineAI/Libs/ImageCls/Classs/public/*.h'
-    imageC.private_header_files = 'QVAIVideoEngineAI/Libs/ImageCls/Classs/Include/*.h'
-    imageC.vendored_libraries = 'QVAIVideoEngineAI/Libs/ImageCls/Libs/*.a'
-  
-  imageC.resource_bundles = {
-        'HumanPose' => ['QVAIVideoEngineAI/Libs/ImageCls/Models/**/*.*']
-      }
-end
-
-
-##AR
-#  s.subspec 'AR' do |ar|
-#    ar.source_files = 'QVAIVideoEngineAI/Libs/AR/Classs/**/*'
-#    ar.public_header_files = 'QVAIVideoEngineAI/Libs/AR/Classs/public/*.h'
-#    ar.private_header_files = 'QVAIVideoEngineAI/Libs/AR/Classs/Include/*.h'
-#    ar.vendored_libraries = 'QVAIVideoEngineAI/Libs/AR/Libs/*.a'
-#end
+# #AR
+#   s.subspec 'AR' do |ar|
+#     ar.source_files = 'QVAIVideoEngineAI/Libs/AR/Classs/**/*'
+#     ar.public_header_files = 'QVAIVideoEngineAI/Libs/AR/Classs/public/*.h'
+#     ar.private_header_files = 'QVAIVideoEngineAI/Libs/AR/Classs/Include/*.h'
+#     ar.vendored_libraries = 'QVAIVideoEngineAI/Libs/AR/Libs/*.a'
+# end
 
   # s.resource_bundles = {
   #   'QVAIVideoEngineAI' => ['QVAIVideoEngineAI/Assets/*.png']

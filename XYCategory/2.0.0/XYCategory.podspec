@@ -13,17 +13,17 @@ Pod::Spec.new do |s|
   s.default_subspec = 'Full'
 
   s.subspec 'Full' do |sf|
-    sf.dependency 'XYCategories/Foundation'
-    sf.dependency 'XYCategories/UIKit'
-    sf.source_files = 'XYCategories/Classes/XYCategory.h'
+    sf.dependency 'XYCategory/Foundation'
+    sf.dependency 'XYCategory/UIKit'
+    sf.source_files = 'XYCategory/Classes/XYCategory.h'
   end
 
   s.subspec 'Foundation' do |sf|
-    sf.source_files = 'XYCategories/Classes/Foundation/**/*'
+    sf.source_files = 'XYCategory/Classes/Foundation/**/*'
   end
 
   s.subspec 'UIKit' do |su|
-    su.source_files = 'XYCategories/Classes/UIKit/**/*'
+    su.source_files = 'XYCategory/Classes/UIKit/**/*'
   end
 
   s.frameworks = 'Accelerate', 'UIKit', 'Foundation', 'AdSupport', 'CoreTelephony'

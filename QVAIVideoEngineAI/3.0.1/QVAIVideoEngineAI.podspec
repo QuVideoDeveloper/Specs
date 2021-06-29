@@ -160,6 +160,7 @@ end
   s.subspec 'HumanPose' do |humanP|
       humanP.dependency 'QVAIVideoEngineAI/Core'
       humanP.dependency 'QVAIVideoEngineAI/CommonLibs'
+      humanP.dependency 'QVAIVideoEngineAI/Crop'
       humanP.source_files = 'QVAIVideoEngineAI/Libs/HumanPose/Classs/**/*'
       humanP.public_header_files = 'QVAIVideoEngineAI/Libs/HumanPose/Classs/public/*.h'
       humanP.private_header_files = 'QVAIVideoEngineAI/Libs/HumanPose/Classs/Include/*.h'

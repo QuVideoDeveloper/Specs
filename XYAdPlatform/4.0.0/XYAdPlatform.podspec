@@ -12,4 +12,5 @@ Pod::Spec.new do |s|
   s.dependency 'XYCategory'
   s.dependency 'XYAdConfig'
   s.dependency 'XYAdCore/AdCore'
+  s.dependency 'XYMediEventAdapter'
 end

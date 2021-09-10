@@ -29,7 +29,7 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Sunshine' => 'cheng.xia@quvideo.com' }
-  s.source           = { :git => 'git@gitlab.quvideo.com:iOSBusinessSDKGroup/QVAIModelManager.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@github.com:QuVideoDeveloper/QVAIModelManager.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
